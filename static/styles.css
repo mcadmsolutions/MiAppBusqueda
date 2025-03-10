@@ -1,0 +1,163 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0056b3; /* Azul elegante */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa para más relieve */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #003f7d; /* Color de hover */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #C0C0C0; /* Plata */
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 80px; /* Para dejar espacio debajo del navbar fijo */
+    padding-bottom: 50px;
+}
+
+/* Formulario de búsqueda */
+.form-control {
+    border-radius: 50px;
+    border: 1px solid #007bff;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+/* Resultados */
+.list-group-item {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Estilos para el mensaje de no resultados */
+.alert {
+    font-size: 1.1rem;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de pasillo */
+.pasillo {
+    font-size: 1.5rem; /* Fuente más grande */
+    color: #007bff; /* Color azul */
+    font-weight: bold; /* Fuente en negrita */
+    text-align: center; /* Centrado del texto */
+}
+
+/* Tabla */
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 30px; /* Espaciado debajo de la tabla */
+}
+
+.table {
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+}
+
+.table th {
+    background-color: #003366; /* Azul marino */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px;
+    text-align: center; /* Centrado de los títulos */
+}
+
+.table td {
+    font-size: 1rem;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+/* Centrar y estilizar la columna "Pasillo" */
+.table td:nth-child(3) { /* Tercer columna: PASILLO */
+    text-align: center; /* Centrado del texto */
+    color: #007bff; /* Color azul */
+    font-weight: bold; /* Fuente en negrita */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+}
+
+.table td:nth-child(4) { /* Cuarta columna */
+    text-align: center; /* Centrado del texto */
+}
