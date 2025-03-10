@@ -48,8 +48,8 @@ def tabla():
     data = sheet.get_all_records()  # Esto obtiene todos los datos de la hoja sin los encabezados
 
     # Verifica si estamos obteniendo datos
-    print("Datos obtenidos desde Google Sheets:")
-    print(data)  # Esto imprimirá los datos en la consola
+    # print("Datos obtenidos desde Google Sheets:")
+    # print(data)  # Esto imprimirá los datos en la consola
 
     return render_template('tabla.html', data=data)
 
