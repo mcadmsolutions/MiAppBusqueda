@@ -1,20 +1,23 @@
 from flask import Flask, render_template, request
 import gspread
 from google.oauth2.service_account import Credentials
+import os
+import json
 
 app = Flask(__name__)
 
-# Credenciales de Google Sheets
-cred_path = "miappbusqueda.json"  # Asegúrate de que el archivo esté en la misma carpeta
+# Credenciales de Google Sheets desde la variable de entorno
+creds_json = os.getenv("GOOGLE_CREDENTIALS")  # Obtener el JSON como una cadena de la variable de entorno
+creds_dict = json.loads(creds_json)  # Convertir la cadena a un diccionario
 scopes = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = Credentials.from_service_account_file(cred_path, scopes=scopes)
+creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
 client = gspread.authorize(creds)
 
 # Abre la hoja de cálculo con el nombre correcto
 spreadsheet = client.open("Mapa Picking Json")
 sheet = spreadsheet.sheet1  # Primera hoja
 
-# Página principal (busqueda)
+# Página principal (búsqueda)
 @app.route('/', methods=['GET'])
 def index():
     query = request.args.get('query', '').lower()  # Obtener la búsqueda y convertirla a minúsculas
